@@ -20,7 +20,7 @@ class Happo extends EventTarget{
                 if(!e.data.success)return
                 clearInterval(checkInterval)
                 window.removeEventListener("message",listener) // Remove listener
-                Happo.isListening=false
+                Happo.isListening=!1
                 W.close()
                 try{
                     const R=e.data.user
@@ -43,8 +43,8 @@ class Happo extends EventTarget{
                 }
             }
             if(!this.isListening){
-                window.addEventListener("message",listener,{once:true})
-                this.isListening=true
+                window.addEventListener("message",listener,{once:!0})
+                this.isListening=!0
             }
         })
     }
