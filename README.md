@@ -54,11 +54,10 @@ For more control, you can handle login and display user details dynamically:
 
 ```javascript
 document.getElementById("login-btn").addEventListener("click",async()=>{
-    try {
+    try{
         const user=await Happo.connect()
         document.getElementById("user-name").innerText=`Welcome, ${user.name}!`
-        document.getElementById("user-avatar").src=user.figure
-    } catch (err) {
+    }catch(err){
         console.error("Failed to login:",err)
     }
 })
