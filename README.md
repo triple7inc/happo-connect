@@ -79,7 +79,7 @@ console.log(user.name) /// "Player1"
 #### **Returned User Object**
 | Property      | Type      | Description |
 |--------------|----------|-------------|
-| `id`         | `string`  | Unique user ID |
+| `id`         | `number`  | Unique user ID |
 | `name`       | `string`  | User’s display name |
 | `motto`      | `string`  | User's bio/status |
 | `email`      | `string`  | Email (if permitted) |
